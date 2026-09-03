@@ -24,11 +24,11 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install langchain langchain-core langchain-community langchain-groq reportlab pydantic
 
       - name: Execute Quiz Pipeline
         env:
-          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           LANGCHAIN_API_KEY: ${{ secrets.LANGCHAIN_API_KEY }}
           LANGCHAIN_TRACING_V2: "true"
           LANGCHAIN_PROJECT: "grade5-au-quiz-agent"
