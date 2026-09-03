@@ -9,7 +9,9 @@ try:
     import reportlab
     import pydantic
 except ImportError:
-    !pip install -q langchain langchain-core langchain-community langchain-groq reportlab pydantic
+     subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", 
+                          "langchain", "langchain-core", "langchain-community", 
+                          "langchain-groq", "reportlab", "pydantic"])
 
 import re
 import html
